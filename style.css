@@ -11,3 +11,32 @@ html {
 body > * {
     height: 100%;
 }
+
+canvas {
+    border: 1px solid white;
+}
+
+.uk-button-with-icon {
+    display: grid;
+    align-items: center;
+    grid-auto-flow: column;
+}
+
+.canvas-container {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.actions-container {
+    padding: 10px;
+}
+
+#blockly_container {
+    flex: 1;
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -7,20 +7,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="dark light">
     <link rel="stylesheet" href="./node_modules/uikit/dist/css/uikit.min.css">
-    <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./layout.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="node_modules/uikit/dist/js/uikit-core.min.js" defer></script>
     <script src="node_modules/uikit/dist/js/uikit-icons.min.js" defer></script>
-    <script src="./index.js" type="module" defer></script>
+    <script src="./blockly.js" type="module" defer></script>
+    <script src="./index.js" defer></script>
     <title>Blockly editor</title>
 </head>
 
-<body>
+<body class="uk-light">
     <div class="vbox">
-        <div id="blockly_container"></div>
+        <div class="editor-container">
+            <div class="uk-button-group actions-container">
+                <button onclick="play()" class="uk-button uk-button-with-icon uk-button-default">play <span uk-icon="play"></span></button>
+            </div>
+            <div id="blockly_container"></div>
+        </div>
         <div class="canvas-container">
             <canvas></canvas>
         </div>
     </div>
 </body>
+
 </html>
